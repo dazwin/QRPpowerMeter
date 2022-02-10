@@ -57,7 +57,7 @@ uint16_t adc_read();
 void  mydelay(uint16_t dly);
 void  show_version();
 void  clearline(int x);
-void  printV(char* msg, float fpv, char c);
+void  printV(const char* msg, float fpv, char c);
 float get_samples();
 float calc_vin(float vai);
 void  calc_power();
@@ -145,7 +145,7 @@ void clearline(int x) {
 }
 
 // print a float value
-void printV(char* msg, float fpv, char c) {
+void printV(const char* msg, float fpv, char c) {
   char val[10];
   oled.print(msg);
   dtostrf(fpv, 6, 2, val);
