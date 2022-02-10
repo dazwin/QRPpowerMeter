@@ -279,6 +279,13 @@ void setup() {
   oled.setFont(fixed_bold10x15);
   adc_init();
   show_version();
+
+  mydelay(2000);
+
+  oled.clear();
+  oled.setCursor(0,0);
+  oled.print(">> running");
+  state = RUNNING;  
 }
 
 // main loop
